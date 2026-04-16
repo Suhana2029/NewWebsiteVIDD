@@ -359,15 +359,13 @@ async function submitContactForm(e) {
   };
 
   const supabasePromise = insertIntoSupabase("contact_submissions", {
-    session_id: siteSessionId,
     first_name: data.first_name,
     last_name: data.last_name,
     title: data.title,
     organisation: data.org,
     email: data.email,
     programme_interest: data.programme,
-    dsp_sc_count: data.count,
-    source_page: window.location.pathname || "/"
+    dsp_sc_count: data.count
   });
 
   const isLocal = window.location.hostname === "127.0.0.1"
