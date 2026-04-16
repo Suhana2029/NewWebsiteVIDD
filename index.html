@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VantageIDD - IDD Workforce Certification Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-shell">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="18" height="18" rx="4" fill="#C87941"/>
+            <path d="M4 6.5L9 4L14 6.5L9 9L4 6.5Z" fill="white" opacity="0.9"/>
+            <path d="M4 9.5L9 7L14 9.5L9 12L4 9.5Z" fill="white" opacity="0.65"/>
+            <path d="M4 12.5L9 10L14 12.5L9 15L4 12.5Z" fill="white" opacity="0.4"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">VantageIDD</span>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu">
+        <a href="#tracks">Programmes</a>
+        <a href="#dsp">DSP Certification</a>
+        <a href="#sc">SC Programme</a>
+        <a href="#alacarte">À la carte</a>
+        <a href="#harvey">Dr. Harvey</a>
+        <a class="book-call" href="#contact">Book a call</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero hero-section" id="home">
+    <div class="hero-bg-image" aria-hidden="true"></div>
+    <div class="hero-bg-overlay" aria-hidden="true"></div>
+    <div class="hero-bg-glow-orange"></div>
+    <div class="hero-bg-glow-green"></div>
+    <svg class="hero-bg-dots" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <circle cx="680" cy="120" r="2.5" fill="#C87941" opacity="0.55"/>
+      <circle cx="720" cy="310" r="1.8" fill="#C87941" opacity="0.35"/>
+      <circle cx="760" cy="80" r="1.2" fill="#C87941" opacity="0.45"/>
+      <circle cx="640" cy="200" r="3.5" fill="#2A4A38" opacity="0.7"/>
+      <circle cx="790" cy="420" r="2.0" fill="#8DD5B0" opacity="0.3"/>
+      <circle cx="700" cy="480" r="1.5" fill="#C87941" opacity="0.25"/>
+      <circle cx="600" cy="350" r="1.0" fill="#8DD5B0" opacity="0.4"/>
+      <circle cx="750" cy="550" r="2.2" fill="#2A4A38" opacity="0.5"/>
+      <circle cx="620" cy="60" r="1.8" fill="#C87941" opacity="0.3"/>
+      <circle cx="780" cy="190" r="1.2" fill="#8DD5B0" opacity="0.35"/>
+    </svg>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="him-hero-banner">
+          <img
+            src="https://focusedusolutions.com/hs-fs/hubfs/HIM%20TM%20Design%20(1).png"
+            alt="Hello, It's Me® logo"
+            class="him-logo-mark"
+            onerror="this.style.display='none'"
+          >
+          <span class="him-developed">Developed in partnership with</span>
+          <a href="https://hello-itsme.com/" target="_blank" rel="noopener" class="him-name">Hello, It's Me®</a>
+          <span class="him-sep">·</span>
+          <span class="him-tagline">The IDD community platform by Focus EduSolutions</span>
+        </div>
+
+        <p class="section-label">IDD WORKFORCE CERTIFICATION</p>
+        <h1 class="hero-title">The professional standard for <em class="serif-em">everyone who supports</em> someone with IDD.</h1>
+        <p class="hero-subhead">VantageIDD is the only IDD workforce certification platform built with Dr. Karen Harvey, Ph.D. as Chief Clinical Architect, delivering three programme tracks for DSPs, support coordinators, and the organisations that employ them.</p>
+        <div class="hero-buttons hero-actions">
+          <a class="btn btn-primary" href="#tracks">Explore the programmes →</a>
+          <a class="btn btn-secondary" href="#contact">Book a call</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat stat-cell">
+            <div class="hero-stat-value stat-num">3</div>
+            <div class="hero-stat-label stat-label">Programme tracks for every workforce type</div>
+          </div>
+          <div class="hero-stat stat-cell">
+            <div class="hero-stat-value stat-num">30</div>
+            <div class="hero-stat-label stat-label">Days to first certified DSP cohort</div>
+          </div>
+          <div class="hero-stat stat-cell">
+            <div class="hero-stat-value stat-num nadsp white">NADSP</div>
+            <div class="hero-stat-label stat-label">Competency-aligned credential framework</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right hero-cards">
+        <article class="hero-track-card">
+          <div class="hero-track-header teal">
+            <p class="track-mini-label">DSP CERTIFICATION PROGRAM</p>
+            <div class="track-card-title">30-Day Intensive + Annual Subscription</div>
+          </div>
+          <div class="hero-track-body">
+            <div class="mini-pills"><span>7 Modules</span><span>WICS Coached</span><span>NADSP Aligned</span></div>
+          </div>
+        </article>
+        <article class="hero-track-card">
+          <div class="hero-track-header indigo">
+            <p class="track-mini-label">IDD CASE MANAGEMENT PROFESSIONAL PROGRAM</p>
+            <div class="track-card-title">Self-Paced + Annual Compliance Cycle</div>
+          </div>
+          <div class="hero-track-body">
+            <div class="mini-pills"><span>4 Modules</span><span>Annual Subscription</span></div>
+          </div>
+        </article>
+        <article class="hero-track-card">
+          <div class="hero-track-header purple">
+            <p class="track-mini-label">À LA CARTE CUSTOM PROGRAMME</p>
+            <div class="track-card-title">Custom Programme Diagnostic</div>
+          </div>
+          <div class="hero-track-body">
+            <div class="mini-pills"><span>5-Question Path</span><span>Named Packages</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="light-section" id="tracks">
+    <div class="container">
+      <p class="section-label">THREE TRACKS</p>
+      <h2 class="section-heading">Built for every <span class="serif-italic">IDD workforce</span> need</h2>
+      <p class="section-subhead">Each track addresses a different training need and a different buyer conversation. The DSP and SC tracks are structured certifications. The à la carte track is a guided diagnostic that packages modules into a coherent named programme.</p>
+
+      <div class="track-cards-grid">
+        <article class="track-card">
+          <div class="track-card-header teal">
+            <div class="track-number">1</div>
+            <p class="track-card-label">DSP CERTIFICATION PROGRAM</p>
+            <h3>30-Day Intensive + Annual Subscription</h3>
+            <p class="track-card-sub">Professional credential for direct support professionals. NADSP-aligned. Coaching-anchored.</p>
+          </div>
+          <div class="track-card-body">
+            <ul class="bullet-list">
+              <li>7 modules across 30 days with live WICS coaching throughout</li>
+              <li>6 group sessions and 5 individual coaching touchpoints per cohort</li>
+              <li>Module 5 anchored by Dr. Harvey - trauma-informed care in IDD settings</li>
+              <li>NADSP-aligned credential issued on completion</li>
+              <li>HCBS Medicaid-ready documentation and compliance export</li>
+              <li>Year 2+ subscription renewal for certified DSPs</li>
+            </ul>
+            <a class="card-cta" href="#dsp">See the 7 modules →</a>
+          </div>
+        </article>
+
+        <article class="track-card">
+          <div class="track-card-header indigo">
+            <div class="track-number">2</div>
+            <p class="track-card-label">IDD CASE MANAGEMENT PROFESSIONAL PROGRAM</p>
+            <h3>Self-Paced + Annual Compliance Cycle</h3>
+            <p class="track-card-sub">Professional certification for support coordinators and TCM staff. Audit-ready dashboard included.</p>
+          </div>
+          <div class="track-card-body">
+            <ul class="bullet-list">
+              <li>4 modules: Trauma-Informed SC Practice, PCP Goal Writing, Fatal Five (SC lens), Mandatory Reporting</li>
+              <li>Module A anchored by Dr. Harvey - trauma from a case management perspective</li>
+              <li>Fully self-paced - no live coaching sessions</li>
+              <li>Annual completion cycle aligned to Medicaid TCM requirements</li>
+              <li>Manager dashboard with group management, new hire auto-enrolment, and exception handling</li>
+              <li>Audit-ready completion export for DMH and state surveyors</li>
+            </ul>
+            <a class="card-cta" href="#sc">See the SC programme →</a>
+          </div>
+        </article>
+
+        <article class="track-card">
+          <div class="track-card-header purple">
+            <div class="track-number">3</div>
+            <p class="track-card-label">À LA CARTE CUSTOM PROGRAMME</p>
+            <h3>Guided Diagnostic to a Named Programme</h3>
+            <p class="track-card-sub">Five questions. One coherent programme. Outcome-driven curation from modules across both tracks.</p>
+          </div>
+          <div class="track-card-body">
+            <ul class="bullet-list">
+              <li>Five outcome-focused diagnostic questions identify your organisation's specific training need</li>
+              <li>Routes to one of four named programme packages - not a module shopping cart</li>
+              <li>Coaching recommended or essential depending on the outcome your organisation needs</li>
+              <li>Dr. Harvey Trauma Programme available as the sole standalone option</li>
+              <li>Minimum three modules to ensure coherent learning outcomes</li>
+              <li>Annual subscription renewal on all selected modules</li>
+            </ul>
+            <a class="card-cta" href="#alacarte">Take the diagnostic →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="white-section" id="dsp">
+    <div class="container">
+      <p class="section-label">TRACK 1</p>
+      <h2 class="section-heading split-heading"><span>DSP Certification Program</span><span class="serif-italic">Seven modules. Thirty days. One credential.</span></h2>
+      <p class="section-subhead left-align">A structured 30-day intensive with live WICS coaching throughout. Every module is sequenced to build on the last. The credential is NADSP-aligned and Medicaid-ready. Dr. Harvey anchors Module 5.</p>
+
+      <div class="module-board">
+        <div class="module-row">
+          <div class="module-badge navy-badge"><span class="module-id">M1</span><span class="module-days">DAYS 1–3</span></div>
+          <div class="module-text"><h3>IDD Foundations and Person-Centered Practice</h3><p>What IDD is, the history of disability rights, person-centered thinking, NADSP Code of Ethics, dignity of risk, and self-determination. Every DSP signs the NADSP Code before advancing.</p></div>
+        </div>
+        <div class="module-row">
+          <div class="module-badge navy-badge"><span class="module-id">M2</span><span class="module-days">DAYS 4–6</span></div>
+          <div class="module-text"><h3>Communication and AAC</h3><p>Presuming competence, augmentative and alternative communication, communication barriers DSPs create, supported conversation techniques. Practical application with real individuals in care.</p></div>
+        </div>
+        <div class="module-row">
+          <div class="module-badge navy-badge"><span class="module-id">M3</span><span class="module-days">DAYS 7–10</span></div>
+          <div class="module-text"><h3>Health, Safety, and the Fatal Five</h3><p>Recognising and responding to the Fatal Five, health change escalation, daily support fundamentals, universal precautions, and behaviour as health communication, all with coached real-world application.</p></div>
+        </div>
+        <div class="module-row">
+          <div class="module-badge navy-badge"><span class="module-id">M4</span><span class="module-days">DAYS 11–15</span></div>
+          <div class="module-text"><h3>Medication Administration Fundamentals</h3><p>Six Rights, medication classes in IDD settings, psychotropic monitoring, MAR documentation, error response, and refusal of medication. Prepares DSPs for their organisation's certification process.</p></div>
+        </div>
+        <div class="module-row">
+          <div class="module-badge orange-badge"><span class="module-id">M5</span><span class="module-days">DAYS 16–21</span></div>
+          <div class="module-text">
+            <h3>Trauma-Informed Practice in IDD Settings</h3>
+            <p>Dr. Harvey's clinical framework applied to direct care. Trauma prevalence in IDD populations, behaviour as trauma response, the five principles, stabilisation strategies, secondary trauma, and DSP self-care.</p>
+            <span class="harvey-tag">⊕ Dr. Karen Harvey, Ph.D. - Chief Clinical Architect</span>
+          </div>
+        </div>
+        <div class="module-row">
+          <div class="module-badge navy-badge"><span class="module-id">M6</span><span class="module-days">DAYS 22–26</span></div>
+          <div class="module-text"><h3>Documentation, HCBS Compliance, and Mandatory Reporting</h3><p>Person-centred documentation, Medicaid HCBS audit standards, incident reporting, HIPAA, abuse and neglect mandatory reporting, and the VantageIDD compliance export. Audit-ready by module end.</p></div>
+        </div>
+        <div class="module-row">
+          <div class="module-badge navy-badge"><span class="module-id">M7</span><span class="module-days">DAYS 27–30</span></div>
+          <div class="module-text"><h3>Professional Identity and Career Development</h3><p>What a professional identity means in direct support, compassion fatigue and recovery, career pathways from DSP to QIDP and clinical roles, and the cohort completion ceremony. Credential issued on Day 30.</p></div>
+        </div>
+      </div>
+
+      <div class="dsp-stats">
+        <div><strong>11</strong><span>WICS coaching touchpoints across 30 days</span></div>
+        <div><strong>6 group + 5 1:1</strong><span>Session breakdown per cohort</span></div>
+        <div><strong>~570 min</strong><span>Total coached time per cohort</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="light-section" id="sc">
+    <div class="container">
+      <p class="section-label">TRACK 2</p>
+      <h2 class="section-heading split-heading"><span>IDD Case Management</span><span class="serif-italic">Professional Program</span></h2>
+      <p class="section-subhead left-align">For support coordinators, TCM staff, and supervisors. Four self-paced modules aligned to Medicaid TCM compliance requirements. Manager dashboard with full audit-ready export. Annual subscription cycle.</p>
+
+      <div class="sc-module-grid">
+        <article class="sc-module-card sc-module-card-A">
+          <p class="module-label">MODULE A</p>
+          <h3 class="module-title">Trauma-Informed Support Coordination</h3>
+          <p class="dr-harvey-badge">⊕ Dr. Harvey anchored</p>
+          <p class="module-desc">Reading trauma history in case documentation, writing trauma-sensitive service plans, and coordinating providers around trauma needs - the SC lens, not the direct care lens.</p>
+        </article>
+        <article class="sc-module-card sc-module-card-B">
+          <p class="module-label">MODULE B</p>
+          <h3 class="module-title">Writing and Monitoring Goals for Person-Centered Plans</h3>
+          <p class="module-desc">HCBS audit-standard goal writing, goal monitoring frequency, progress notes, and when to revise a goal. The core SC competency most commonly cited in audit findings.</p>
+        </article>
+        <article class="sc-module-card sc-module-card-C">
+          <p class="module-label">MODULE C</p>
+          <h3 class="module-title">Fatal Five - Monitoring and Coordination Lens</h3>
+          <p class="module-desc">Recognising Fatal Five patterns across case notes over time, escalating when a provider minimises a concern, and documenting a health concern as a case management record for coordination.</p>
+        </article>
+        <article class="sc-module-card sc-module-card-D">
+          <p class="module-label">MODULE D</p>
+          <h3 class="module-title">Abuse, Neglect, and Exploitation - SC Mandatory Reporting</h3>
+          <p class="module-desc">SC-specific mandatory reporting obligations distinct from direct care staff, recognising abuse and financial exploitation in home visits and case notes, and filing when a provider minimises.</p>
+        </article>
+      </div>
+
+      <div class="manager-dashboard">
+        <div class="dashboard-copy">
+          <h3>Manager Dashboard + Compliance Export</h3>
+          <p>HR coordinators manage up to four training groups, annual assignment cycles, new hire auto-enrolment, individual exception handling, and one-click audit export, without IT involvement.</p>
+          <div class="pill-row">
+            <span class="manager-pill">Group management</span>
+            <span class="manager-pill">Annual cycle + due dates</span>
+            <span class="manager-pill">New hire auto-enrolment</span>
+            <span class="manager-pill">Excuse / extend individuals</span>
+            <span class="manager-pill">Audit trail export</span>
+          </div>
+        </div>
+        <div class="dashboard-statuses">
+          <div class="staff-row"><span>J. Martinez - Module A</span><span class="badge-complete">Complete</span></div>
+          <div class="staff-row"><span>T. Wilson - Module B</span><span class="badge-progress">In progress</span></div>
+          <div class="staff-row"><span>A. Patel - Module C</span><span class="badge-overdue">Overdue</span></div>
+          <div class="staff-row"><span>S. Thompson - Module A</span><span class="badge-complete">Complete</span></div>
+          <div class="staff-row"><span>K. Rodriguez - Module D</span><span class="badge-progress">In progress</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="white-section" id="alacarte">
+    <div class="container">
+      <p class="section-label">TRACK 3</p>
+      <h2 class="section-heading split-heading"><span>À la carte</span><span class="serif-italic">Find your programme.</span></h2>
+      <p class="section-subhead left-align">Five outcome-focused questions route you to a coherent, named training programme. The questions are designed the way a professional needs assessment should be, outcome first, not product first.</p>
+
+      <div class="diagnostic-card">
+        <div id="diagnostic-root"></div>
+      </div>
+
+      <div class="named-section">
+        <h3>The four named programmes</h3>
+        <p>Every diagnostic path resolves to one of these four. No isolated modules are sold outside these packages, except the Dr. Harvey Trauma Programme.</p>
+        <div class="named-grid">
+          <article class="named-program navy-block">
+            <h4>IDD Workforce Foundation Programme</h4>
+            <p class="named-meta">New hire cohorts, high-turnover orgs</p>
+            <p>Establishes professional identity, foundational clinical competency, and a career pathway that gives DSPs a reason to stay. Approximately 14 days. Coaching recommended.</p>
+            <div class="module-pills"><span>M1 Foundations</span><span>M2 Communication</span><span>M3 Health/Safety</span><span>M7 Professional Identity</span></div>
+          </article>
+          <article class="named-program teal-block">
+            <h4>Trauma-Informed IDD Organisation Programme</h4>
+            <p class="named-meta">Clinical quality gap, no existing trauma framework</p>
+            <p>Dr. Harvey anchors this programme. Builds consistent trauma-informed practice across the organisation. Coaching essential, practice change requires human accountability. Both DSP and SC versions available.</p>
+            <div class="module-pills"><span>Dr. Harvey M5</span><span>M1 Foundations</span><span>M3 Health/Safety</span><span>SC Module A</span></div>
+          </article>
+          <article class="named-program indigo-block">
+            <h4>IDD Compliance and Documentation Programme</h4>
+            <p class="named-meta">Audit risk, documentation quality gaps</p>
+            <p>Covers HCBS documentation standards, mandatory reporting, HIPAA, and person-centred note quality for both DSPs and SCs. Self-paced sufficient for this outcome, compliance is process-based, not relational.</p>
+            <div class="module-pills"><span>M6 Documentation</span><span>SC Module B PCP Goals</span><span>SC Module D Reporting</span><span>M3 Health/Safety</span></div>
+          </article>
+          <article class="named-program orange-block">
+            <h4>IDD Mixed Workforce Professional Programme</h4>
+            <p class="named-meta">DSPs and SCs trained simultaneously</p>
+            <p>For organisations with both DSPs and SCs who want a unified training programme. Dr. Harvey anchors the clinical component. DSP track includes coaching; SC track runs in parallel self-paced.</p>
+            <div class="module-pills"><span>M1 Foundations</span><span>M3 Health/Safety</span><span>Dr. Harvey M5</span><span>M6 Documentation</span><span>SC Module A</span><span>SC Module D</span></div>
+          </article>
+        </div>
+        <div class="standalone-exception">
+          <div class="star-icon">★</div>
+          <div>
+            <p class="section-label">SOLE STANDALONE EXCEPTION</p>
+            <h4>Dr. Karen Harvey Trauma-Informed IDD Practice</h4>
+            <p>The only product available as a standalone outside the four named packages. For organisations that already have a training system in place and want to upgrade their trauma-informed practice component specifically. Includes all five Dr. Harvey videos, the Case Companion Guide, three IDD-specific case studies, and a completion certificate. Priced separately - contact for rates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-section" id="harvey">
+    <div class="container harvey-layout">
+      <div class="harvey-card">
+        <img
+          class="harvey-photo"
+          src="dr-harvey.png"
+          alt="Dr. Karen Harvey"
+        >
+        <div class="harvey-meta">
+          <h4>Dr. Karen Harvey, Ph.D.</h4>
+          <p>Chief Clinical Architect, VantageIDD</p>
+        </div>
+      </div>
+      <div class="harvey-text">
+        <p class="section-label">CHIEF CLINICAL ARCHITECT</p>
+        <h2 class="section-heading dark-text">The clinical authority behind every VantageIDD programme.</h2>
+        <blockquote class="harvey-quote">"A direct support professional role deserves a real professional identity, clear standards, and recognised credentials. The people supporting individuals with IDD deserve a workforce that is trained to that standard."</blockquote>
+        <p class="dark-body">Dr. Harvey designed the clinical and curriculum architecture underlying VantageIDD. She is not a guest faculty or endorser, she built the framework the entire programme rests on. Her trauma-informed IDD practice model anchors Module 5 of the DSP Certification and Module A of the IDD Case Management Professional Program.</p>
+        <div class="relias-box"><strong>The Relias connection:</strong> The trauma-informed IDD module that many providers currently complete through Relias was built on Dr. Harvey's published research. VantageIDD brought Dr. Harvey into the room. She does not just underpin the content, she designed it.</div>
+        <div class="facts-grid">
+          <div class="fact-box">
+            <p class="fact-label">FIELD</p>
+            <p class="fact-value">Trauma-informed care in IDD populations</p>
+            <p class="fact-label">PUBLISHED BY</p>
+            <p class="fact-value">AAIDD - American Association on Intellectual and Developmental Disability</p>
+          </div>
+          <div class="fact-box">
+            <p class="fact-label">CURRICULUM SCOPE</p>
+            <p class="fact-value">DSP Module 5, SC Module A, and the Harvey Standalone Trauma Programme</p>
+            <p class="fact-label">OVERSIGHT ROLE</p>
+            <p class="fact-value">Reviews WICS coach alignment and clinical standards across all VantageIDD programmes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="white-section" id="wellcheck">
+    <div class="container wellcheck-layout">
+      <div class="wellcheck-left">
+        <div class="wellcheck-top-badges">
+          <span class="coming-pill">● Coming soon</span>
+          <span class="coming-pill">FREE WORKFORCE DIAGNOSTIC</span>
+        </div>
+        <h2 class="section-heading">DSP<span class="serif-italic">WellCheck</span></h2>
+        <p class="section-subhead left-align">A 10-minute anonymous survey for your DSP team. Receive an organisation-level workforce readiness report immediately, at no cost, with no commitment required.</p>
+        <ul class="check-list">
+          <li>Organisation-level results only - no individual DSP is ever identified</li>
+          <li>Highlights professional development strengths and gaps across your workforce</li>
+          <li>The natural starting point for a VantageIDD programme conversation</li>
+          <li>Free. Confidential. Results delivered immediately.</li>
+        </ul>
+        <button class="wellcheck-notify-btn" id="openWellcheckModal" type="button">Notify me when available</button>
+      </div>
+      <div class="wellcheck-card">
+        <p class="section-label">DSPWELLCHECK - PREVIEW</p>
+        <div class="wellcheck-row">
+          <p>How confident are you in recognising early signs of the Fatal Five in the individuals you support?</p>
+          <div class="survey-bar"><span style="width:72%"></span></div>
+        </div>
+        <div class="wellcheck-row">
+          <p>How often do you feel your documentation accurately reflects the individual's experience, not just the tasks you completed?</p>
+          <div class="survey-bar"><span style="width:63%"></span></div>
+        </div>
+        <div class="wellcheck-row">
+          <p>To what extent do you feel you have a professional identity in this role, separate from just doing a job?</p>
+          <div class="survey-bar"><span style="width:68%"></span></div>
+        </div>
+        <div class="wellcheck-report">
+          <p class="teal-report-label">ORGANISATION REPORT - PROFESSIONAL IDENTITY READINESS</p>
+          <p>68% of your DSPs report a moderate professional identity score. Focus area identified: career pathway visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="light-section" id="how">
+    <div class="container">
+      <p class="section-label centered">GETTING STARTED</p>
+      <h2 class="section-heading centered">From first call to <span class="serif-italic">certified workforce</span></h2>
+      <p class="section-subhead centered">A clean implementation path from initial conversation to programme launch. Two weeks from contract to first session. No IT complexity. No third-party platform required.</p>
+
+      <div class="steps-grid">
+        <article class="step-card"><div class="step-square">1</div><h3>Discovery call</h3><p>We identify which track fits your workforce, your compliance requirements, and your budget conversation. If you have done the DSPWellCheck, we review your results together.</p><span class="step-track">All tracks</span></article>
+        <article class="step-card"><div class="step-square">2</div><h3>Programme selection</h3><p>We present the right track or package for your organisation. If you are undecided, the five-question à la carte diagnostic produces a named recommendation before the proposal is written.</p><span class="step-track">All tracks</span></article>
+        <article class="step-card"><div class="step-square">3</div><h3>Contract signed</h3><p>Agreement signed, institutional access activated. Kickoff meeting scheduled within five business days.</p><span class="step-track">All tracks</span></article>
+        <article class="step-card"><div class="step-square">4</div><h3>Kickoff and WICS coach introduction</h3><p>For Track 1 and coaching-included Track 3: your WICS coach is assigned and meets your administration at the kickoff meeting. Coach aligns with your organisation before a single module goes live.</p><span class="step-track">Track 1 + coached Track 3</span></article>
+        <article class="step-card"><div class="step-square">5</div><h3>Cohort enrolled, programme begins</h3><p>DSPs or SCs are enrolled. For Track 2: annual cycle assignments are configured in the manager dashboard. For Track 1: first group session scheduled within two weeks of contract signature.</p><span class="step-track">Tracks 1 and 2</span></article>
+        <article class="step-card final-card"><div class="step-square final-square">6</div><h3>Credentialled workforce</h3><p>DSPs complete the 30-day programme and receive their credential. SCs complete their annual compliance cycle. Compliance export generated for your records. Year 2 subscription activates.</p><span class="step-track">All tracks</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="white-section" id="regulatory">
+    <div class="container">
+      <p class="section-label centered">REGULATORY ENVIRONMENT</p>
+      <h2 class="section-heading centered">Built around <span class="serif-italic">Medicaid, HCBS, and NADSP</span></h2>
+      <div class="regulatory-grid">
+        <article class="reg-card">
+          <div class="reg-icon">✓</div>
+          <h3>NADSP-aligned curriculum</h3>
+          <p>Module architecture follows NADSP Competency Areas and professional role standards. The credential issued to completing DSPs maps to the NADSP e-badge pathway for further professional development.</p>
+        </article>
+        <article class="reg-card">
+          <div class="reg-icon">▣</div>
+          <h3>Medicaid-ready documentation</h3>
+          <p>VantageIDD captures every field Medicaid auditors require - DSP name, hire date, module completion dates, assessment scores, and supervisor sign-off. The compliance export is audit-ready for both Track 1 and Track 2.</p>
+        </article>
+        <article class="reg-card">
+          <div class="reg-icon">◐</div>
+          <h3>HCBS waiver compatible</h3>
+          <p>Implementation supports person-centered delivery models across waiver-funded programmes. Documentation standards in Module 6 align to current HCBS Settings Rule requirements and CMS waiver audit protocols.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-section" id="roi">
+    <div class="container">
+      <p class="section-label centered">RETURN ON INVESTMENT</p>
+      <h2 class="section-heading centered dark-text">The cost of doing <span class="serif-italic">nothing</span></h2>
+      <p class="section-subhead centered dark-muted">Model your current annual turnover cost. National average DSP turnover is 43 to 50 percent. Some organisations report 70 percent or higher. The VantageIDD investment is a fraction of what one year of that costs.</p>
+      <div class="roi-panel">
+        <div class="slider-group">
+          <div class="slider-meta"><label for="dsps">Total DSPs on staff</label><span id="dsps-val" class="live-value">40</span></div>
+          <input id="dsps" type="range" min="10" max="200" step="1" value="40">
+        </div>
+        <div class="slider-group">
+          <div class="slider-meta"><label for="rate">Annual turnover rate (%)</label><span id="rate-val" class="live-value">45%</span></div>
+          <input id="rate" type="range" min="20" max="80" step="1" value="45">
+        </div>
+        <div class="roi-results">
+          <div class="roi-result"><strong id="exits">18</strong><span>DSP exits per year</span></div>
+          <div class="roi-result"><strong id="cost">$90,000</strong><span>Annual turnover cost at $5,000/exit</span></div>
+          <div class="roi-result"><strong id="saving">$9,000</strong><span>Conservative 10% reduction after Year 1 VantageIDD</span></div>
+          <div class="roi-result"><strong id="ratio">10×+</strong><span>Turnover cost versus VantageIDD investment</span></div>
+        </div>
+        <p class="roi-footnote">Assumes $5,000 average replacement cost per DSP exit (recruiting, onboarding, and productivity loss). Actual costs typically range $3,000 to $8,000+. Pricing on request.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="white-section" id="contact">
+    <div class="container">
+      <p class="section-label centered">GET STARTED</p>
+      <h2 class="section-heading centered">Ready to talk about your <span class="serif-italic">workforce?</span></h2>
+      <p class="section-subhead centered">Tell us about your organisation and we will come prepared with the right track for your situation. No pitch. No product demo before we understand your need.</p>
+
+      <div class="randeep-card">
+        <div class="randeep-avatar">
+          <img src="images/randeep.jpg" alt="Randeep Kaur Sethi" onerror="this.style.display='none';this.parentElement.textContent='RK'">
+        </div>
+        <div class="randeep-info">
+          <p class="randeep-name">Randeep Kaur Sethi</p>
+          <p class="randeep-role">Programme Lead, VantageIDD</p>
+          <p class="randeep-contact">Prefer to call? <a href="tel:+13398004332">(339) 800-4332 Ext. 410</a></p>
+          <p class="randeep-contact"><a href="mailto:help@hello-itsme.com">help@hello-itsme.com</a></p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" action="mailto:help@hello-itsme.com" method="GET">
+        <div class="form-grid">
+          <div class="field"><label for="first-name">FIRST NAME</label><input id="first-name" name="First name" required></div>
+          <div class="field"><label for="last-name">LAST NAME</label><input id="last-name" name="Last name" required></div>
+          <div class="field"><label for="your-title">YOUR TITLE</label><input id="your-title" name="Your title" required></div>
+          <div class="field"><label for="organisation">ORGANISATION</label><input id="organisation" name="Organisation" required></div>
+          <div class="field full"><label for="email">EMAIL</label><input id="email" name="Email" type="email" required></div>
+          <div class="field full">
+            <label for="programme-interest">WHICH PROGRAMME INTERESTS YOU?</label>
+            <select id="programme-interest" name="Programme" required>
+              <option value="">Select a track...</option>
+              <option>Track 1 - DSP Certification Program</option>
+              <option>Track 2 - IDD Case Management Professional Program</option>
+              <option>Track 3 - À la carte (guided diagnostic)</option>
+              <option>Not sure yet - I want to talk it through</option>
+            </select>
+          </div>
+          <div class="field full"><label for="headcount">NUMBER OF DSPS OR SCS TO TRAIN</label><input id="headcount" name="Number of DSPs or SCs to train" placeholder="Approximate number" required></div>
+        </div>
+        <button class="submit-btn" type="submit">Request a call →</button>
+        <p id="form-error" style="color:#C87941;font-size:13px;text-align:center;margin-top:8px;display:none"></p>
+        <p class="form-status" id="contactStatus" aria-live="polite"></p>
+        <p class="form-helper">We will respond within one business day. Randeep or a member of the team will be in touch. No spam. No unsolicited follow-up.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-columns">
+      <div class="footer-col">
+        <h3 class="footer-brand">VantageIDD</h3>
+        <p>The professional standard for everyone who supports someone with IDD. Built with Dr. Karen Harvey, Ph.D., Chief Clinical Architect.</p>
+      </div>
+      <div class="footer-col">
+        <p class="section-label">PROGRAMMES</p>
+        <a href="#dsp">DSP Certification Program</a>
+        <a href="#sc">IDD Case Management Professional Program</a>
+        <a href="#alacarte">À la carte Custom Programme</a>
+        <a href="#harvey">Harvey Standalone Trauma Programme</a>
+      </div>
+      <div class="footer-col">
+        <p class="section-label">RESOURCES</p>
+        <a href="#wellcheck">DSPWellCheck (Coming soon)</a>
+        <a href="#how">How it works</a>
+        <a href="#harvey">Dr. Karen Harvey</a>
+      </div>
+      <div class="footer-col">
+        <p class="section-label">COMPANY</p>
+        <a href="#contact">Book a call</a>
+        <a href="https://focusedusolutions.com" target="_blank" rel="noopener noreferrer">Focus EduSolutions</a>
+      </div>
+    </div>
+
+    <div class="container him-footer-row">
+      <div class="him-footer-copy">
+        <img class="him-footer-round" src="https://focusedusolutions.com/hs-fs/hubfs/HIM%20TM%20Design%20(1).png" alt="Hello, It's Me logo" onerror="this.style.display='none'">
+        <div>
+          <div class="him-footer-word">Hello, It's Me®</div>
+          <p>Hello, It's Me® is a safe platform by Focus EduSolutions for individuals with IDD to learn, interact, connect, and have fun. VantageIDD is the workforce certification arm - training the professionals who support the IDD community.</p>
+        </div>
+      </div>
+      <a class="him-footer-link" href="https://hello-itsme.com/" target="_blank" rel="noopener">Visit hello-itsme.com →</a>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Focus EduSolutions, Inc. · VantageIDD · All rights reserved.</p>
+      <p>A programme of <a href="https://focusedusolutions.com" target="_blank" rel="noopener noreferrer">Focus EduSolutions</a></p>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="wellcheckModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="wellcheckModalTitle">
+      <button class="modal-close" id="closeWellcheckModal" type="button" aria-label="Close">×</button>
+      <div id="wellcheckModalContent">
+        <h3 class="modal-title" id="wellcheckModalTitle">Get notified when DSPWellCheck launches</h3>
+        <form class="modal-form" id="wellcheckNotifyForm">
+          <input id="wellcheck-email" name="email" type="email" placeholder="Email address" required>
+          <button class="modal-submit-btn" type="submit">Notify me →</button>
+          <p class="form-status" id="wellcheckModalStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
