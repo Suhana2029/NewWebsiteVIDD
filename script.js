@@ -366,7 +366,7 @@ async function submitContactForm(e) {
     organisation: data.org,
     email: data.email,
     programme: data.programme,
-    headcount: data.count,
+    dsp_sc_count: data.count,
     source_page: window.location.pathname || "/"
   });
 
@@ -374,10 +374,9 @@ async function submitContactForm(e) {
                || window.location.hostname === "localhost";
 
   const mailtrapPromise = !isLocal
-    ? fetch("https://send.api.mailtrap.io/api/send", {
+    ? fetch("/.netlify/functions/send-email", {
         method: "POST",
         headers: {
-          Authorization: "Bearer 4e3b5e351cfb5b5e403c09ded951d8db",
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
@@ -523,10 +522,9 @@ async function submitWellcheckSignup(email) {
                || window.location.hostname === "localhost";
 
   if (!isLocal) {
-    const res = await fetch("https://send.api.mailtrap.io/api/send", {
+    const res = await fetch("/.netlify/functions/send-email", {
       method: "POST",
       headers: {
-        Authorization: "Bearer 4e3b5e351cfb5b5e403c09ded951d8db",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
