@@ -372,7 +372,7 @@ async function submitContactForm(e) {
                || window.location.hostname === "localhost";
 
   const mailtrapPromise = !isLocal
-    ? fetch("/.netlify/functions/send-email", {
+    ? fetch("/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -520,7 +520,7 @@ async function submitWellcheckSignup(email) {
                || window.location.hostname === "localhost";
 
   if (!isLocal) {
-    const res = await fetch("/.netlify/functions/send-email", {
+    const res = await fetch("/api/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
