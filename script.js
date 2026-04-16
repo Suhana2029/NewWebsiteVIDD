@@ -362,10 +362,10 @@ async function submitContactForm(e) {
     session_id: siteSessionId,
     first_name: data.first_name,
     last_name: data.last_name,
-    your_title: data.title,
+    title: data.title,
     organisation: data.org,
     email: data.email,
-    programme: data.programme,
+    programme_interest: data.programme,
     dsp_sc_count: data.count,
     source_page: window.location.pathname || "/"
   });
