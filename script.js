@@ -235,8 +235,8 @@ function showOutcome() {
 function talkAboutProgram() {
   document.getElementById("contact").scrollIntoView({behavior:'smooth'});
   setTimeout(() => {
-    const select = document.getElementById("programme-select") ||
-                   document.querySelector('select[name="programme_interest"]');
+    const select = document.getElementById("program-select") ||
+                   document.querySelector('select[name="program_interest"]');
     if (select && window.recommendedProgramName) {
       const name = window.recommendedProgramName.toLowerCase();
       const opts = [...select.options];
@@ -390,7 +390,7 @@ async function submitContactForm(e) {
     title: form.querySelector('[name="Your title"]').value,
     org: form.querySelector('[name="Organisation"]').value,
     email: form.querySelector('[name="Email"]').value,
-    program: (form.querySelector('[name="programme_interest"]') || form.querySelector('[name="Program"]'))?.value || "",
+    program: (form.querySelector('[name="program_interest"]') || form.querySelector('[name="Program"]'))?.value || "",
     count: form.querySelector('[name="Number of DSPs or SCs to train"]').value
   };
 
