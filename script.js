@@ -5,9 +5,9 @@ const diagnosticQuestions = [
     sub: "This anchors the entire curation to a named outcome, not a training preference.",
     options: [
       { title: "A professionally credentialled DSP workforce", note: "Routes to DSP certification track" },
-      { title: "Reduced DSP turnover and improved retention", note: "Routes to foundation or certification programmes" },
-      { title: "Compliance readiness for audit or state survey", note: "Routes to compliance and documentation programme" },
-      { title: "A trauma-informed standard of care across the organisation", note: "Routes to trauma-informed programme" },
+      { title: "Reduced DSP turnover and improved retention", note: "Routes to foundation or certification programs" },
+      { title: "Compliance readiness for audit or state survey", note: "Routes to compliance and documentation program" },
+      { title: "A trauma-informed standard of care across the organisation", note: "Routes to trauma-informed program" },
       { title: "A credentialled case management team", note: "Routes to IDD Case Management Professional Program" }
     ]
   },
@@ -19,15 +19,15 @@ const diagnosticQuestions = [
       { title: "DSPs supporting individuals with complex behavioural or health needs", note: "Adds health, trauma, and medication modules - coaching recommended" },
       { title: "Support coordinators managing high-complexity caseloads", note: "Adds SC trauma and mandatory reporting - self-paced viable" },
       { title: "New hires entering direct care without prior IDD experience", note: "Adds foundations and communication modules - coaching recommended" },
-      { title: "All staff - systemic gaps across the full workforce", note: "Routes to mixed workforce programme - coaching essential" }
+      { title: "All staff - systemic gaps across the full workforce", note: "Routes to mixed workforce program - coaching essential" }
     ]
   },
   {
     title: "QUESTION 3 OF 5",
     question: "Where does your organisation have the most significant evidence-based practice gap?",
-    sub: "This determines whether Dr. Harvey's programme is the centrepiece or a supporting module - and whether coaching is essential or optional.",
+    sub: "This determines whether Dr. Harvey's program is the centrepiece or a supporting module - and whether coaching is essential or optional.",
     options: [
-      { title: "Trauma-informed support - no consistent clinical framework", note: "Dr. Harvey's programme is central - coaching essential" },
+      { title: "Trauma-informed support - no consistent clinical framework", note: "Dr. Harvey's program is central - coaching essential" },
       { title: "Health and safety monitoring - staff miss early warning signs", note: "Fatal Five, health, and medication modules - coaching recommended" },
       { title: "Documentation and compliance - audit exposure or note quality", note: "Documentation and HCBS compliance module - self-paced viable" },
       { title: "Person-centred practice - staff default to task completion", note: "Foundations and communication modules - coaching recommended" }
@@ -35,12 +35,12 @@ const diagnosticQuestions = [
   },
   {
     title: "QUESTION 4 OF 5",
-    question: "What must your organisation demonstrate to funders, surveyors, or families by the end of the programme?",
+    question: "What must your organisation demonstrate to funders, surveyors, or families by the end of the program?",
     sub: "Accountability framing determines the credential and delivery format. Demonstrable practice change requires coached application with evidence.",
     options: [
       { title: "That our DSPs hold a nationally recognised professional credential", note: "Confirms NADSP-aligned certification, formal credential" },
       { title: "That our staff have completed verified regulatory training", note: "Confirms compliance module emphasis, audit documentation export" },
-      { title: "That our organisation operates to a trauma-informed standard", note: "Dr. Harvey programme central - coaching essential to prove practice change" },
+      { title: "That our organisation operates to a trauma-informed standard", note: "Dr. Harvey program central - coaching essential to prove practice change" },
       { title: "That our case management team meets professional competency standards", note: "Confirms IDD-CMP credential for SC track" }
     ]
   },
@@ -49,7 +49,7 @@ const diagnosticQuestions = [
     question: "If one thing changed in how your workforce supports the individuals in your care, what would have the greatest impact on their quality of life?",
     sub: "This confirms the outcome and determines how coaching is framed - as professional accountability or as clinical quality assurance.",
     options: [
-      { title: "Staff would understand and respond to trauma rather than misreading it as behaviour", note: "Confirms: Trauma-Informed programme - coaching essential - Dr. Harvey anchored" },
+      { title: "Staff would understand and respond to trauma rather than misreading it as behaviour", note: "Confirms: Trauma-Informed program - coaching essential - Dr. Harvey anchored" },
       { title: "Staff would catch health changes earlier and escalate before they become emergencies", note: "Confirms: Health and Safety emphasis - coaching recommended" },
       { title: "Staff would support real choice and self-determination, not just plan compliance", note: "Confirms: Person-centred foundation - coaching recommended for practice change" },
       { title: "Staff would document in a way that reflects the person, not the task completed", note: "Confirms: Documentation emphasis - self-paced viable with live documentation review" }
@@ -99,25 +99,25 @@ async function insertIntoSupabase(table, payload) {
 
 const outcomes = {
   trauma: {
-    name: "Trauma-Informed IDD Organisation Programme",
-    text: "Your answers indicate a clinical quality gap in trauma-informed practice, the most common gap in IDD provider organisations and the one with the highest impact on individual outcomes. Dr. Harvey's framework is the centrepiece of this programme.",
+    name: "Trauma-Informed IDD Organization Program",
+    text: "Your answers indicate a clinical quality gap in trauma-informed practice, the most common gap in IDD provider organisations and the one with the highest impact on individual outcomes. Dr. Harvey's framework is the centrepiece of this program.",
     modules: ["M1 IDD Foundations", "M5 Dr. Harvey Trauma", "M3 Health + Safety", "SC Module A"],
-    note: "Coaching is essential for this outcome. Trauma-informed practice is a behavioural and relational change - content alone produces awareness, coaching produces transformation. WICS coaching is included in the programme recommendation."
+    note: "Coaching is essential for this outcome. Trauma-informed practice is a behavioural and relational change - content alone produces awareness, coaching produces transformation. WICS coaching is included in the program recommendation."
   },
   compliance: {
-    name: "IDD Compliance and Documentation Programme",
+    name: "IDD Compliance and Documentation Program",
     text: "Your answers indicate a compliance and documentation risk that requires an audit-ready training pathway focused on HCBS standards, reporting, and note quality.",
     modules: ["M6 Documentation", "SC Module B PCP Goals", "SC Module D Reporting", "M3 Health/Safety"],
     note: "Self-paced sufficient for this outcome - compliance is process-based, not relational."
   },
   workforce: {
-    name: "IDD Workforce Foundation Programme",
+    name: "IDD Workforce Foundation Program",
     text: "Your answers indicate a workforce development need focused on onboarding, professional identity, and retention across new or high-turnover DSP cohorts.",
     modules: ["M1 Foundations", "M2 Communication", "M3 Health/Safety", "M7 Professional Identity"],
     note: "Coaching recommended to support retention and professional identity formation."
   },
   mixed: {
-    name: "IDD Mixed Workforce Professional Programme",
+    name: "IDD Mixed Workforce Professional Program",
     text: "Your answers indicate a mixed workforce need spanning DSPs and support coordinators, requiring a unified pathway with role-specific modules.",
     modules: ["M1 Foundations", "M3 Health/Safety", "Dr. Harvey M5", "M6 Documentation", "SC Module A", "SC Module D"],
     note: "DSP track includes coaching; SC track runs in parallel self-paced."
@@ -144,9 +144,9 @@ function showQuestion(n) {
   const q = diagnosticQuestions[n];
   const selected = answers[n];
   root.innerHTML = `
-    <p class="diag-top-label">FIVE-QUESTION PROGRAMME DIAGNOSTIC</p>
-    <h3 class="diag-title">What does your organisation need?</h3>
-    <p class="diag-copy">Answer five questions about your workforce and we will identify the training programme that fits your specific need, including whether coaching is essential, recommended, or not required.</p>
+    <p class="diag-top-label">FIND YOUR PROGRAM</p>
+    <h3 class="diag-title">What outcome does your organisation need?</h3>
+    <p class="diag-copy">Answer five questions about your workforce and we will identify the training program that fits your specific need, including whether coaching is essential, recommended, or not required.</p>
     <p class="diag-question-label">${q.title}</p>
     <h4 class="diag-main-question">${q.question}</h4>
     <p class="diag-sub">${q.sub}</p>
@@ -165,7 +165,7 @@ function showQuestion(n) {
       ${renderProgress()}
       <div class="diag-buttons">
         ${n > 0 ? `<button class="diag-btn secondary" id="diag-back">Back</button>` : ""}
-        <button class="diag-btn primary" id="diag-next" ${selected ? "" : "disabled"}>${n === diagnosticQuestions.length - 1 ? "See my programme" : "Continue"}</button>
+        <button class="diag-btn primary" id="diag-next" ${selected ? "" : "disabled"}>${n === diagnosticQuestions.length - 1 ? "See my program" : "Continue"}</button>
       </div>
     </div>
   `;
@@ -202,10 +202,12 @@ function showOutcome() {
   const root = document.getElementById("diagnostic-root");
   if (!root) return;
   const outcome = pickOutcome();
+  const outcomeName = outcome.name;
+  window.recommendedProgramName = outcomeName;
   storeDiagnosticResult(outcome);
   root.innerHTML = `
     <div class="outcome-card">
-      <p class="diag-top-label">YOUR RECOMMENDED PROGRAMME</p>
+      <p class="diag-top-label">YOUR RECOMMENDED PROGRAM</p>
       <h4>${outcome.name}</h4>
       <p>${outcome.text}</p>
       <div class="module-pills" style="margin:12px 0 10px;">
@@ -213,7 +215,7 @@ function showOutcome() {
       </div>
       <p>${outcome.note}</p>
       <div class="outcome-actions">
-        <a class="btn btn-primary" href="#contact">Talk to us about this programme</a>
+        <button type="button" class="btn btn-primary" onclick="talkAboutProgram()">Talk to us about this program</button>
         <a class="text-link" href="#" id="start-over">Start over</a>
       </div>
     </div>
@@ -228,6 +230,40 @@ function showOutcome() {
       showQuestion(0);
     });
   }
+}
+
+function talkAboutProgram() {
+  document.getElementById("contact").scrollIntoView({behavior:'smooth'});
+  setTimeout(() => {
+    const select = document.getElementById("programme-select") ||
+                   document.querySelector('select[name="programme_interest"]');
+    if (select && window.recommendedProgramName) {
+      const name = window.recommendedProgramName.toLowerCase();
+      const opts = [...select.options];
+      const match = opts.find(o =>
+        name.includes('foundation') && o.value === 'foundation' ||
+        name.includes('trauma') && o.value === 'trauma' ||
+        name.includes('compliance') && o.value === 'compliance' ||
+        name.includes('mixed') && o.value === 'mixed' ||
+        name.includes('diagnostic') && o.value === 'alacarte'
+      );
+      if (match) {
+        match.selected = true;
+        select.dispatchEvent(new Event('change'));
+      }
+    }
+    const existing = document.getElementById('diagnostic-note');
+    if (!existing && window.recommendedProgramName) {
+      const form = document.querySelector('#contact form, .contact-form');
+      if (form) {
+        const note = document.createElement('div');
+        note.id = 'diagnostic-note';
+        note.style.cssText = 'background:rgba(200,121,65,0.1);border:1px solid rgba(200,121,65,0.3);border-radius:10px;padding:12px 16px;margin-bottom:1.25rem;font-family:Inter,sans-serif;font-size:13px;color:#C87941;';
+        note.textContent = 'Based on your diagnostic - "' + window.recommendedProgramName + '" has been pre-selected.';
+        form.insertBefore(note, form.firstChild);
+      }
+    }
+  }, 800);
 }
 
 async function storeDiagnosticResult(outcome) {
@@ -354,7 +390,7 @@ async function submitContactForm(e) {
     title: form.querySelector('[name="Your title"]').value,
     org: form.querySelector('[name="Organisation"]').value,
     email: form.querySelector('[name="Email"]').value,
-    programme: form.querySelector('[name="Programme"]').value,
+    program: (form.querySelector('[name="programme_interest"]') || form.querySelector('[name="Program"]'))?.value || "",
     count: form.querySelector('[name="Number of DSPs or SCs to train"]').value
   };
 
@@ -364,7 +400,7 @@ async function submitContactForm(e) {
     title: data.title,
     organisation: data.org,
     email: data.email,
-    programme_interest: data.programme,
+    program_interest: data.program,
     dsp_sc_count: data.count
   });
 
@@ -380,7 +416,7 @@ async function submitContactForm(e) {
         body: JSON.stringify({
           from: { email: "noreply@hello-itsme.com", name: "VantageIDD" },
           to: [{ email: "help@hello-itsme.com" }],
-          subject: `New VantageIDD enquiry — ${data.org}`,
+          subject: `New VantageIDD enquiry - ${data.org}`,
           html: `<!DOCTYPE html>
 <html>
 <body style="font-family: Inter, sans-serif; color: #1A2330; 
@@ -419,8 +455,8 @@ async function submitContactForm(e) {
       </td>
     </tr>
     <tr style="border-bottom: 1px solid #F0EAE0;">
-      <td style="padding: 12px 0; color: #7A8A96;">Programme interest</td>
-      <td style="padding: 12px 0;">${data.programme}</td>
+      <td style="padding: 12px 0; color: #7A8A96;">Program interest</td>
+      <td style="padding: 12px 0;">${data.program}</td>
     </tr>
     <tr>
       <td style="padding: 12px 0; color: #7A8A96;">DSP / SC count</td>
@@ -441,7 +477,7 @@ async function submitContactForm(e) {
 
   <p style="margin-top: 24px; font-size: 12px; color: #B8C8D8; 
             text-align: center;">
-    VantageIDD · A programme of Focus EduSolutions
+    VantageIDD · Powered by Focus EduSolutions · hello-itsme.com
   </p>
 
 </body>
@@ -454,7 +490,7 @@ async function submitContactForm(e) {
         return res;
       })
     : Promise.resolve(
-        console.log("Local environment — skipping Mailtrap, would have sent email to help@hello-itsme.com")
+        console.log("Local environment - skipping Mailtrap, would have sent email to help@hello-itsme.com")
       );
 
   const results = await Promise.allSettled([
@@ -528,7 +564,7 @@ async function submitWellcheckSignup(email) {
       body: JSON.stringify({
         from: { email: "noreply@hello-itsme.com", name: "VantageIDD" },
         to: [{ email: "help@hello-itsme.com" }],
-        subject: `New DSPWellCheck signup — ${email}`,
+        subject: `New DSPWellCheck signup - ${email}`,
         html: `<!DOCTYPE html>
 <html>
 <body style="font-family: Inter, sans-serif; color: #1A2330; 
@@ -565,7 +601,7 @@ async function submitWellcheckSignup(email) {
 
   <p style="margin-top: 24px; font-size: 12px; color: #B8C8D8; 
             text-align: center;">
-    VantageIDD · A programme of Focus EduSolutions
+    VantageIDD · Powered by Focus EduSolutions · hello-itsme.com
   </p>
 
 </body>
@@ -574,7 +610,7 @@ async function submitWellcheckSignup(email) {
     });
     return res.ok;
   } else {
-    console.log("Local environment — skipping Mailtrap, would have sent email to help@hello-itsme.com");
+    console.log("Local environment - skipping Mailtrap, would have sent email to help@hello-itsme.com");
     return true;
   }
 }
@@ -617,6 +653,26 @@ document.getElementById("wellcheckNotifyForm")?.addEventListener("submit", async
     }
   }
 });
+
+const harveyMessages = [
+  "Chief Clinical Architect",
+  "Trauma-Informed IDD Expert",
+  "Published by AAIDD",
+  "30+ Years IDD Research",
+  "Author of VantageIDD Curriculum"
+];
+let harveyIdx = 0;
+const rotEl = document.querySelector(".harvey-rotating-text");
+if (rotEl) {
+  setInterval(() => {
+    harveyIdx = (harveyIdx + 1) % harveyMessages.length;
+    rotEl.style.opacity = "0";
+    setTimeout(() => {
+      rotEl.textContent = harveyMessages[harveyIdx];
+      rotEl.style.opacity = "1";
+    }, 300);
+  }, 2500);
+}
 
 showQuestion(0);
 updateROI();
