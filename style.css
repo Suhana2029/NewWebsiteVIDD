@@ -313,15 +313,74 @@ nav {
 .him-hero-banner {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(26, 140, 114, 0.18);
-  border: 1px solid rgba(26, 140, 114, 0.4);
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(14, 107, 84, 0.52), rgba(22, 34, 48, 0.64));
+  border: 2px solid rgba(125, 240, 197, 0.62);
   border-radius: 999px;
-  padding: 5px 16px 5px 5px;
+  padding: 9px 24px 9px 9px;
   white-space: nowrap;
   max-width: 100%;
   overflow: hidden;
   margin-bottom: 1.75rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.26),
+    0 0 0 1px rgba(125, 240, 197, 0.3) inset,
+    0 0 30px rgba(125, 240, 197, 0.26);
+  position: relative;
+  isolation: isolate;
+}
+
+.him-hero-banner::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  bottom: -30%;
+  width: 34%;
+  left: -40%;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 46%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: blur(1px);
+  animation: himBannerShimmer 5.5s ease-in-out infinite;
+}
+
+.him-hero-banner > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes himBannerShimmer {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.15;
+  }
+  40% {
+    opacity: 0.45;
+  }
+  65% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateX(420%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .him-hero-banner::after {
+    animation: none;
+    opacity: 0;
+  }
 }
 
 .him-logo-mark {
@@ -333,32 +392,35 @@ nav {
 }
 
 .him-logo-mark, .him-logo {
-  width: 36px !important;
-  height: 36px !important;
+  width: 44px !important;
+  height: 44px !important;
   border-radius: 50% !important;
   object-fit: cover !important;
+  border: 2px solid rgba(125, 240, 197, 0.6);
+  box-shadow: 0 0 0 2px rgba(8, 20, 30, 0.55);
 }
 
 .him-developed {
   font-size: 11px;
-  color: rgba(184, 200, 216, 0.75);
+  color: rgba(226, 236, 245, 0.92);
   white-space: nowrap;
 }
 
 .him-developed, .him-text {
-  font-size: 12px !important;
+  font-size: 13px !important;
 }
 
 .him-name {
   font-size: 11px;
   font-weight: 600;
-  color: #5DCAA5;
+  color: #7DF0C5;
   text-decoration: none;
   white-space: nowrap;
+  text-shadow: 0 0 12px rgba(125, 240, 197, 0.3);
 }
 
 .him-name, .him-link {
-  font-size: 13px !important;
+  font-size: 15px !important;
   font-weight: 700 !important;
 }
 
@@ -369,20 +431,20 @@ nav {
 }
 
 .him-sep {
-  color: rgba(184, 200, 216, 0.3);
+  color: rgba(226, 236, 245, 0.62);
   font-size: 11px;
   white-space: nowrap;
 }
 
 .him-tagline {
-  font-size: 11px;
-  color: rgba(184, 200, 216, 0.65);
+  font-size: 13px;
+  color: rgba(226, 236, 245, 0.82);
   white-space: nowrap;
 }
 
 .him-hero-banner, .him-banner {
-  padding: 6px 20px 6px 6px !important;
-  gap: 10px !important;
+  padding: 9px 24px 9px 9px !important;
+  gap: 12px !important;
 }
 
 .section-label {
@@ -2326,6 +2388,11 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (max-width: 768px) {
+  .hero-left .him-hero-banner {
+    margin-left: 0;
+    gap: 8px !important;
+  }
+
   .container {
     width: calc(100% - 2.5rem);
   }
