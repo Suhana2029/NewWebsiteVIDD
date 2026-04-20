@@ -293,33 +293,41 @@ window.addEventListener("scroll", () => {
   document.querySelector(".site-header")?.classList.toggle("scrolled", window.scrollY > 50);
 });
 
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('nav.nav-menu');
+(function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav.nav-menu');
 
-if (hamburger && navMenu) {
-  hamburger.addEventListener('click', (e) => {
+  if (!hamburger || !navMenu) return;
+
+  // Toggle menu open/close
+  hamburger.addEventListener('click', function(e) {
     e.stopPropagation();
-    navMenu.classList.toggle('open');
-    // Animate hamburger to X
-    hamburger.classList.toggle('active');
+    const isOpen = navMenu.classList.contains('open');
+    if (isOpen) {
+      navMenu.classList.remove('open');
+      hamburger.classList.remove('active');
+    } else {
+      navMenu.classList.add('open');
+      hamburger.classList.add('active');
+    }
   });
 
-  // Close menu when a link is clicked
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+  // Close when any nav link is clicked
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
       navMenu.classList.remove('open');
       hamburger.classList.remove('active');
     });
   });
 
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
+  // Close when clicking anywhere outside the nav
+  document.addEventListener('click', function(e) {
     if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
       navMenu.classList.remove('open');
       hamburger.classList.remove('active');
     }
   });
-}
+})();
 
 function updateSliderFill(slider) {
   const min = Number(slider.min || 0);
