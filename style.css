@@ -130,6 +130,7 @@ body {
 }
 
 .nav-shell {
+  position: relative;
   min-height: 56px;
   display: flex;
   align-items: center;
@@ -2477,10 +2478,10 @@ input[type="range"]::-moz-range-thumb {
     width: 100% !important;
     background: #162230 !important;
     border-top: 1px solid rgba(255,255,255,0.08) !important;
-    z-index: 999 !important;
+    z-index: 9999 !important;
     flex-direction: column !important;
     padding: 0.5rem 0 1rem !important;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6) !important;
   }
 
   /* When menu is open — add class 'open' via JS */
@@ -3165,6 +3166,10 @@ section.hero,
     box-shadow: 0 2px 16px rgba(0,0,0,0.4) !important;
   }
 
+  .nav-shell {
+    position: relative !important;
+  }
+
   /* Push hero content down so it doesn't hide behind fixed nav */
   body {
     padding-top: 60px !important;
@@ -3216,10 +3221,10 @@ section.hero,
     right: 0 !important;
     width: 100% !important;
     background: #162230 !important;
-    z-index: 9998 !important;
+    z-index: 9999 !important;
     flex-direction: column !important;
     padding: 0.5rem 0 1.5rem !important;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6) !important;
     border-top: 1px solid rgba(255,255,255,0.08) !important;
     max-height: calc(100vh - 60px) !important;
     overflow-y: auto !important;
