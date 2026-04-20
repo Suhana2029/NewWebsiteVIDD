@@ -3135,3 +3135,118 @@ section.hero,
     font-size: 28px;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* 1. HIM BANNER — single line, compact on mobile */
+  .him-banner, .him-hero-banner {
+    padding: 5px 12px 5px 5px !important;
+    gap: 6px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    max-width: 100% !important;
+  }
+  .him-logo-mark, .him-logo {
+    width: 28px !important;
+    height: 28px !important;
+    flex-shrink: 0 !important;
+  }
+  .him-developed, .him-text,
+  .him-sep, .him-tagline {
+    display: none !important;
+  }
+  .him-name, .him-link {
+    font-size: 12px !important;
+    white-space: nowrap !important;
+  }
+  /* Show only logo + "Inspired by Hello, It's Me®" */
+  .him-banner::after {
+    content: 'Inspired by Hello, It\'s Me®';
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: rgba(184,200,216,0.8);
+    white-space: nowrap;
+  }
+
+  /* 2. SECTION LABEL — prevent wrapping */
+  .section-label, .hero .section-label {
+    white-space: nowrap !important;
+    font-size: 10px !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  /* 3. H1 — smaller on mobile */
+  h1, .hero h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.12 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* 4. HERO SUBHEAD — tighter on mobile */
+  .hero-subhead, .hero p {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* 5. HERO INNER — single column */
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    padding: 2rem 1.25rem !important;
+    gap: 2rem !important;
+  }
+
+  /* 6. HERO RIGHT — hide track cards on mobile 
+     (they appear in the tracks section below anyway) */
+  .hero-right {
+    display: none !important;
+  }
+
+  /* 7. HERO BUTTONS — stack vertically */
+  .hero-buttons {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+  }
+  .hero-buttons a,
+  .hero-buttons button {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* 8. STATS ROW — 1 column on very small screens */
+  .hero-stats {
+    grid-template-columns: 1fr !important;
+  }
+  .stat-cell {
+    border-right: none !important;
+    border-bottom: 1px solid #2E4055 !important;
+    padding: 0.75rem 1rem !important;
+  }
+  .stat-cell:last-child {
+    border-bottom: none !important;
+  }
+
+  /* 9. LOGO — keep single line on mobile */
+  .nav-logo-svg {
+    height: 38px !important;
+    width: auto !important;
+  }
+
+  /* 10. NAV — tighter on mobile */
+  nav {
+    padding: 0 1rem !important;
+    height: 56px !important;
+  }
+
+}
+
+/* Extra small phones */
+@media (max-width: 390px) {
+  h1, .hero h1 {
+    font-size: 1.9rem !important;
+  }
+  .hero-subhead {
+    font-size: 13px !important;
+  }
+}
