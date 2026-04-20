@@ -293,9 +293,33 @@ window.addEventListener("scroll", () => {
   document.querySelector(".site-header")?.classList.toggle("scrolled", window.scrollY > 50);
 });
 
-document.querySelector(".hamburger")?.addEventListener("click", () => {
-  document.querySelector(".nav-menu")?.classList.toggle("open");
-});
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav.nav-menu');
+
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navMenu.classList.toggle('open');
+    // Animate hamburger to X
+    hamburger.classList.toggle('active');
+  });
+
+  // Close menu when a link is clicked
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      hamburger.classList.remove('active');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+      navMenu.classList.remove('open');
+      hamburger.classList.remove('active');
+    }
+  });
+}
 
 function updateSliderFill(slider) {
   const min = Number(slider.min || 0);

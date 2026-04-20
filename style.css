@@ -2387,6 +2387,21 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (max-width: 768px) {
+  /* Nav shell — sticky, full width, dark background */
+  .nav-shell {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    background: #162230 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 1.25rem !important;
+    height: 60px !important;
+    width: 100% !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3) !important;
+  }
+
   .hero .hero-inner,
   section.hero .hero-inner {
     grid-template-columns: 1fr !important;
@@ -2431,25 +2446,80 @@ input[type="range"]::-moz-range-thumb {
     width: calc(100% - 2.5rem);
   }
 
+  /* Hamburger — visible on mobile */
   .hamburger {
-    display: block;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 4px !important;
+    z-index: 1001 !important;
   }
 
-  .nav-menu {
-    display: none;
-    position: absolute;
-    top: 56px;
-    left: 0;
-    right: 0;
-    background: var(--bg-dark);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 1.25rem;
-    border-top: 1px solid var(--bg-border-dark);
+  .hamburger span {
+    display: block !important;
+    width: 24px !important;
+    height: 2px !important;
+    background: white !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
   }
 
-  .nav-menu.open {
-    display: flex;
+  /* Nav menu — hidden by default, full width dropdown */
+  nav.nav-menu {
+    display: none !important;
+    position: absolute !important;
+    top: 60px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: #162230 !important;
+    border-top: 1px solid rgba(255,255,255,0.08) !important;
+    z-index: 999 !important;
+    flex-direction: column !important;
+    padding: 0.5rem 0 1rem !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3) !important;
+  }
+
+  /* When menu is open — add class 'open' via JS */
+  nav.nav-menu.open {
+    display: flex !important;
+  }
+
+  /* Nav links — stacked vertically */
+  nav.nav-menu a {
+    display: block !important;
+    padding: 12px 1.5rem !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 15px !important;
+    color: #B8C8D8 !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+    width: 100% !important;
+  }
+
+  nav.nav-menu a:hover {
+    color: white !important;
+    background: rgba(255,255,255,0.04) !important;
+  }
+
+  /* Book a call — styled as button in dropdown */
+  nav.nav-menu a.book-call {
+    margin: 0.75rem 1.5rem 0 !important;
+    background: #C87941 !important;
+    color: white !important;
+    border-radius: 999px !important;
+    text-align: center !important;
+    padding: 10px 1.5rem !important;
+    border-bottom: none !important;
+    width: calc(100% - 3rem) !important;
+  }
+
+  /* Make nav-shell position relative so dropdown positions correctly */
+  .nav-shell {
+    position: relative !important;
   }
 
   .hero-inner,
@@ -2518,11 +2588,30 @@ input[type="range"]::-moz-range-thumb {
   .team-grid {
     grid-template-columns: 1fr;
   }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg) !important;
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0 !important;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg) !important;
+  }
 }
 
 @media (max-width: 520px) {
   .footer-columns {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none !important;
+  }
+  nav.nav-menu {
+    display: flex !important;
   }
 }
 
