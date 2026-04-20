@@ -3151,7 +3151,7 @@ section.hero,
 
   /* Wrapper that contains logo + hamburger + nav */
   .nav-shell {
-    position: fixed !important;
+    position: relative !important;
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
@@ -3170,30 +3170,38 @@ section.hero,
     position: relative !important;
   }
 
+  nav, nav.nav-menu {
+    height: auto !important;
+  }
+
   /* Push hero content down so it doesn't hide behind fixed nav */
   body {
     padding-top: 60px !important;
   }
 
   /* Show hamburger button */
-  .hamburger {
+  header .nav-shell .hamburger,
+  header .hamburger,
+  .site-header .hamburger {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     gap: 5px !important;
-    width: 36px !important;
-    height: 36px !important;
+    width: 40px !important;
+    height: 40px !important;
     background: none !important;
     border: none !important;
     cursor: pointer !important;
-    padding: 4px !important;
+    padding: 6px !important;
     z-index: 10000 !important;
     flex-shrink: 0 !important;
   }
 
-  .hamburger span {
+  header .nav-shell .hamburger span,
+  header .hamburger span,
+  .site-header .hamburger span {
     display: block !important;
-    width: 22px !important;
+    width: 24px !important;
     height: 2px !important;
     background: white !important;
     border-radius: 2px !important;
@@ -3213,6 +3221,8 @@ section.hero,
   }
 
   /* Nav menu — HIDDEN by default on mobile */
+  header .site-header nav.nav-menu,
+  .site-header nav.nav-menu,
   nav.nav-menu {
     display: none !important;
     position: fixed !important;
@@ -3220,14 +3230,17 @@ section.hero,
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: calc(100vh - 60px) !important;
+    overflow-y: auto !important;
     background: #162230 !important;
     z-index: 9999 !important;
     flex-direction: column !important;
+    align-items: stretch !important;
     padding: 0.5rem 0 1.5rem !important;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.6) !important;
-    border-top: 1px solid rgba(255,255,255,0.08) !important;
-    max-height: calc(100vh - 60px) !important;
-    overflow-y: auto !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.7) !important;
+    border-top: 1px solid rgba(255,255,255,0.1) !important;
   }
 
   /* Nav menu — VISIBLE when open class added */
@@ -3270,7 +3283,7 @@ section.hero,
     text-align: center !important;
     padding: 12px 1.5rem !important;
     border-bottom: none !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
   }
 
   nav.nav-menu a.book-call:hover {
