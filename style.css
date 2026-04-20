@@ -2387,6 +2387,41 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (max-width: 768px) {
+  .hero .hero-inner,
+  section.hero .hero-inner {
+    grid-template-columns: 1fr !important;
+    padding: 2rem 1.25rem !important;
+  }
+
+  .hero h1,
+  section.hero h1,
+  #home h1 {
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .hero .hero-right,
+  section.hero .hero-right,
+  #home .hero-right {
+    display: none !important;
+  }
+
+  .him-banner *,
+  .him-hero-banner * {
+    white-space: nowrap !important;
+  }
+  .him-banner .him-tagline,
+  .him-hero-banner .him-tagline,
+  .him-banner .him-sep,
+  .him-hero-banner .him-sep {
+    display: none !important;
+  }
+
+  .hero .section-label {
+    white-space: nowrap !important;
+    font-size: 10px !important;
+  }
+
   .hero-left .him-hero-banner {
     margin-left: 0;
     gap: 8px !important;
@@ -3016,237 +3051,4 @@ section.hero,
   text-align: center;
   margin-top: 6px;
   font-style: italic;
-}
-
-/* Mobile responsiveness hardening */
-@media (max-width: 768px) {
-  .nav-shell {
-    min-height: 52px;
-    gap: 10px;
-  }
-
-  .nav-logo {
-    padding-right: 0.75rem;
-    margin-right: 0.25rem;
-  }
-
-  .nav-logo-svg {
-    height: 40px;
-  }
-
-  .hero-left,
-  .hero-copy {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .him-hero-banner {
-    width: 100%;
-    max-width: 100%;
-    white-space: normal;
-    flex-wrap: wrap;
-    row-gap: 6px;
-    column-gap: 8px;
-    padding: 8px 12px 8px 8px !important;
-  }
-
-  .him-name,
-  .him-link {
-    font-size: 14px !important;
-  }
-
-  .him-developed,
-  .him-text,
-  .him-tagline {
-    font-size: 12px !important;
-    line-height: 1.35;
-  }
-
-  .hero-buttons .btn,
-  .hero-actions .btn {
-    width: 100%;
-  }
-
-  .hero-stat,
-  .stat-cell {
-    border-right: none;
-    border-bottom: 1px solid #2E4055;
-  }
-
-  .hero-stat:last-child,
-  .stat-cell:last-child {
-    border-bottom: none;
-  }
-
-  .dsp-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .dsp-stats div {
-    border-bottom: 1px solid #2E4055;
-  }
-
-  .dsp-stats div:last-child {
-    border-bottom: none;
-  }
-
-  .footer-bottom {
-    align-items: flex-start;
-  }
-
-  .footer-bottom > div,
-  .footer-bottom > p {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    width: calc(100% - 1.25rem);
-  }
-
-  .hero-inner,
-  .hero-grid {
-    padding: 3.5rem 0.625rem;
-  }
-
-  .nav-logo-svg {
-    height: 36px;
-  }
-
-  .hero h1,
-  .hero-section h1 {
-    font-size: 30px !important;
-    line-height: 1.18;
-  }
-
-  .section-heading {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 360px) {
-  .hero h1,
-  .hero-section h1 {
-    font-size: 27px !important;
-  }
-
-  .section-heading {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  /* 1. HIM BANNER — single line, compact on mobile */
-  .him-banner, .him-hero-banner {
-    padding: 5px 12px 5px 5px !important;
-    gap: 6px !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    max-width: 100% !important;
-  }
-  .him-logo-mark, .him-logo {
-    width: 28px !important;
-    height: 28px !important;
-    flex-shrink: 0 !important;
-  }
-  .him-developed, .him-text,
-  .him-sep, .him-tagline {
-    display: none !important;
-  }
-  .him-name, .him-link {
-    font-size: 12px !important;
-    white-space: nowrap !important;
-  }
-  /* Show only logo + "Inspired by Hello, It's Me®" */
-  .him-banner::after {
-    content: 'Inspired by Hello, It\'s Me®';
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    color: rgba(184,200,216,0.8);
-    white-space: nowrap;
-  }
-
-  /* 2. SECTION LABEL — prevent wrapping */
-  .section-label, .hero .section-label {
-    white-space: nowrap !important;
-    font-size: 10px !important;
-    letter-spacing: 0.08em !important;
-  }
-
-  /* 3. H1 — smaller on mobile */
-  h1, .hero h1 {
-    font-size: 2.2rem !important;
-    line-height: 1.12 !important;
-    margin-bottom: 1rem !important;
-  }
-
-  /* 4. HERO SUBHEAD — tighter on mobile */
-  .hero-subhead, .hero p {
-    font-size: 14px !important;
-    line-height: 1.65 !important;
-    margin-bottom: 1.5rem !important;
-  }
-
-  /* 5. HERO INNER — single column */
-  .hero-inner {
-    grid-template-columns: 1fr !important;
-    padding: 2rem 1.25rem !important;
-    gap: 2rem !important;
-  }
-
-  /* 6. HERO RIGHT — hide track cards on mobile 
-     (they appear in the tracks section below anyway) */
-  .hero-right {
-    display: none !important;
-  }
-
-  /* 7. HERO BUTTONS — stack vertically */
-  .hero-buttons {
-    flex-direction: column !important;
-    gap: 0.75rem !important;
-    width: 100% !important;
-  }
-  .hero-buttons a,
-  .hero-buttons button {
-    width: 100% !important;
-    text-align: center !important;
-  }
-
-  /* 8. STATS ROW — 1 column on very small screens */
-  .hero-stats {
-    grid-template-columns: 1fr !important;
-  }
-  .stat-cell {
-    border-right: none !important;
-    border-bottom: 1px solid #2E4055 !important;
-    padding: 0.75rem 1rem !important;
-  }
-  .stat-cell:last-child {
-    border-bottom: none !important;
-  }
-
-  /* 9. LOGO — keep single line on mobile */
-  .nav-logo-svg {
-    height: 38px !important;
-    width: auto !important;
-  }
-
-  /* 10. NAV — tighter on mobile */
-  nav {
-    padding: 0 1rem !important;
-    height: 56px !important;
-  }
-
-}
-
-/* Extra small phones */
-@media (max-width: 390px) {
-  h1, .hero h1 {
-    font-size: 1.9rem !important;
-  }
-  .hero-subhead {
-    font-size: 13px !important;
-  }
 }
