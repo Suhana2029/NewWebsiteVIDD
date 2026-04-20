@@ -2451,21 +2451,25 @@ input[type="range"]::-moz-range-thumb {
   .hamburger {
     display: flex !important;
     flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 40px !important;
+    height: 40px !important;
     gap: 5px !important;
-    background: none !important;
-    border: none !important;
     cursor: pointer !important;
-    padding: 4px !important;
-    z-index: 1001 !important;
+    padding: 8px !important;
+    background: transparent !important;
+    border: none !important;
   }
 
   .hamburger span {
     display: block !important;
-    width: 24px !important;
+    width: 22px !important;
     height: 2px !important;
     background: white !important;
     border-radius: 2px !important;
-    transition: all 0.3s ease !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
   }
 
   /* Nav menu — hidden by default, full width dropdown */
